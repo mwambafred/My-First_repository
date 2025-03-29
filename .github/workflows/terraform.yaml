@@ -20,7 +20,7 @@ jobs:
             env:
               access_key: ${{ secrets.AWS_ACCESS_KEY }}
               secret_key: ${{ secrets.AWS_SECRET_KEY }}
-            run: terraform plan
+            run: terraform plan -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
 
           - name: Terraform Apply
             run: terraform apply -auto-approve
