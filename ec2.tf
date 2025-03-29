@@ -9,8 +9,6 @@ terraform {
     bucket = "fred12345"
     key    = "terraform/terraform.tfstate"
     region = "us-east-2"
-    access_key = var.access_key
-    secret_key = var.secrets_key
   }
 }
 
