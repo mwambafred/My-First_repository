@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = var.access_key
-  secret_key = var.secrets_key
+  access_key = var.provider_access_key
+  secret_key = var.provider_secrets_key
 }
 
 terraform {
@@ -9,13 +9,14 @@ terraform {
     bucket = "fred12345"
     key    = "terraform/terraform.tfstate"
     region = "us-east-2"
+
   }
 }
 
-variable "access_key" {
+variable "provider_access_key" {
   type = string
 }
-variable "secrets_key" {
+variable "provider_secrets_key" {
   type = string
 }
 
